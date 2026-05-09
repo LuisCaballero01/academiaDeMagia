@@ -19,7 +19,7 @@ Algunos de los magos que Arcana Magisterium puede reclutar son: Selene, Balthaza
 
 Selene tiene inicialmente una energía mágica de 35, un poder de 60 y una habilidad especial llamada Luz Lunar (inicialmente desactivada). Esta habilidad solo puede alternarse, es decir, si está desactivada pasa a estar activada y viceversa. Cuando entrena sin estar potenciada, su energía mágica aumenta en 25; pero cuando está potenciada, su poder se duplica.
 
-Balthazar tiene 450 horas de entrenamiento y nunca hizo hechizos dañinos aún. Su poder base se calcula como 35 menos el número de veces que ha usado hechizos dañinos, multiplicado por 3. Su poder magico es la cantidad de horas de entrenamiento dividido 10. Su entrenamiento consiste en entrenar 100 horas y hacer un hechizo dañino.
+Balthazar tiene 450 horas de entrenamiento y nunca hizo hechizos dañinos aún. Su poder base se calcula como 35 menos el número de veces que ha usado hechizos dañinos multiplicado por 3. Su poder magico es la cantidad de horas de entrenamiento dividido 10. Su entrenamiento consiste en entrenar 100 horas y hacer un hechizo dañino.
 
 Iris siempre tiene una energía de 80 y un poder de 35. Pero como su especialidad es la salud, cuenta con una capacidad de sanación  que comienza en 2 y que cuando entrena aumenta en 1. Puede usar su poder de sanación en el Escudo Mágico de Arcana, que protege a la academia. Si su capacidad de sanación es un número impar, el escudo mejora en 150 su resistencia y en 100 su durabilidad; en caso contrario, el escudo mejora en 80 la resistencia y 60 la durabilidad por cada unidad de sanación.
 
@@ -38,7 +38,7 @@ En otro test, Selene solo entrena sin alternar la Luz Lunar y es evaluada por la
 
 Balthazar puede ser reclutado al inicio, pero después de entrenar dos veces, su energía mágica aumenta a 65 y su poder baja a 29. En ese momento ya no puede ser reclutado.
 
-Iris usa su poder de sanación en el Escudo Mágico de Arcana, mejorando su resistencia y durabilidad a 550 y 700, respectivamente. En otro test, entrena y vuelve a usar su sanación, dejando el escudo con 480 de resistencia y 760 de durabilidad.
+Iris usa su poder de sanación en el Escudo Mágico de Arcana, mejorando su resistencia y durabilidad a 480 y 660, respectivamente. En otro test, entrena y vuelve a usar su sanación, dejando el escudo con 550 de resistencia y 700 de durabilidad.
 
 ## Mas Prubeas
 - Reclutar a los 4 magos y comprobar que Balthazar e Iris permanecen en el equipo.
