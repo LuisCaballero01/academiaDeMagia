@@ -1,7 +1,75 @@
+import habilidadesYArmas.*
 import academia.*
 import magos.*
 describe "academina" {
-    test "test 1" {
-        assert.that(true)
+    test "la academia intenta reclutar a Aldric pero tiene bajo poder, así que queda como candidato" {
+        academina.reclutarMago(aldric)
+        assert.that(academina.esCandidato(aldric))
     }
+    test "la academia intenta reclutar a Aldric, queda como candidato, cambia al bastón de fuego, entrena y la academia lo evalúa. Ahora es parte del equipo."{
+        academina.reclutarMago(aldric)
+        aldric.cambiarBaston(bastonDeFuego)
+        academina.entrenarCandidato(aldric)
+        academina.reevaluarCandidatos()
+        assert.that(academina.superaEvaluacion(aldric))
+    }
+    test "Selene alterna LuzLunar y entrena. Su poder pasa a ser 120, pero como su energía sigue siendo 35, no aprueba la evaluación de Academina."{
+        selene.alternarLuzLunar()
+        selene.entrenar()
+        assert.notThat(academina.superaEvaluacion(selene))
+    }
+    test "Selene entrena sin alternar LuzLunar y aprueba la evaluación de Academina porque su energía es 60"{
+        selene.entrenar()
+        assert.that(academina.superaEvaluacion(selene))
+    }
+    test "Balthazar puede ser reclutado"{
+        assert.that(academina.superaEvaluacion(balthazar))
+    }
+    test "Baltazhar entrena 2 veces y su energia es 65"{
+        balthazar.entrenar()
+        balthazar.entrenar()
+        assert.equals(65, balthazar.energia())
+    }
+    test "Baltazhar entrena 2 veces y su poder es 29"{
+        balthazar.entrenar()
+        balthazar.entrenar()
+        assert.equals(29, balthazar.poder())
+    }
+    test "Si entrena 2 veces, Baltazhar no supera la evaluación."{
+        balthazar.entrenar()
+        balthazar.entrenar()
+        assert.notThat(academina.superaEvaluacion(balthazar))
+    }
+    test "Iris usa su poder de sanación en el escudo arcana, y la resistencia del escudo es 480 y su durabilidad es 660"{
+        iris.usarSanacion()
+        assert.equals(480, academina.resistenciaEscudo())
+        assert.equals(660, academina.durabilidadEscudo())
+    }
+    test "Iris entrena y usa su poder de sanación en el Escudo Magico Arcana, y la resistencia del escudo es 550 y su durabilidad es 700"{
+        iris.entrenar()
+        iris.usarSanacion()
+        assert.equals(550, academina.resistenciaEscudo())
+        assert.equals(700, academina.durabilidadEscudo())
+    }
+    test "Academina recluta a los 4 magos. Balthazar e Iris pertenecen al equipo"{
+        academina.reclutarMago(selene)
+        academina.reclutarMago(aldric)
+        academina.reclutarMago(iris)
+        academina.reclutarMago(balthazar)
+        assert.that(academina.esDelEquipo(balthazar))
+        assert.that(academina.esDelEquipo(iris))
+    }
+    test "Selene y Balthazar entrenan una vez y Academina recluta a los 4 magos. Selene pertenece al equipo"{
+        selene.entrenar()
+        balthazar.entrenar()
+        academina.reclutarMago(selene)
+        academina.reclutarMago(aldric)
+        academina.reclutarMago(iris)
+        academina.reclutarMago(balthazar)
+        assert.that(academina.esDelEquipo(selene))
+        assert.equals(127, academina.poderDelEquipo())
+        assert.equals(28, academina.deltaDeEnergia())
+        assert.that(academina.equipoOptimo())
+    }
+
 }

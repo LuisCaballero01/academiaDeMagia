@@ -45,5 +45,5 @@ Iris usa su poder de sanación en el Escudo Mágico de Arcana, mejorando su resi
 - Entrenar a Selene y Balthazar una vez, reclutar a los 4 magos y validar lo siguiente en el mismo test:
     - Selene también pertenece al equipo.
     - El poder total del equipo es igual a 127.
-    - El delta de la energía es 20.
+    - El delta de la energía es 28.
     - La academia está en condiciones óptimas.
